@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { FaXTwitter } from "react-icons/fa6";
+import { BsTwitterX } from "react-icons/bs";
 function Footer() {
   return (
     <footer className="bg-black text-white">
@@ -24,7 +24,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaXTwitter />
+            <BsTwitterX />
           </a>
           <a
             className="btn btn-floating m-1"
