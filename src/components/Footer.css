@@ -1,0 +1,10 @@
+.rm.btn.btn-floating {
+  background-color: "#ffffff";
+  color: "#000";
+  transition: smooth;
+}
+.rm.btn.btn-floating:hover {
+  /* background-color: #ffffff !important; */
+  color: #ffffff !important;
+  transition: 1s ease-in-out ;
+}
