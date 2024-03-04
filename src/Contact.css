@@ -1,13 +1,10 @@
 #p {
   font-size: 24px;
 }
-#wrap {
+.wrap {
   width: 530px;
   margin: 20px auto 0;
   height: 570px;
-
-
-
 }
 #h1 {
   margin-bottom: 20px;
@@ -134,8 +131,9 @@ button[type="submit"]:hover {
 }
 
 @media screen and (max-width: 768px) {
-  #wrap {
+  .wrap {
     padding: 10px;
+    height: screen;
   }
   h1 {
     font-size: 1.5em;
@@ -148,7 +146,7 @@ button[type="submit"]:hover {
   textarea {
     font-size: 0.9em;
     height: 58px;
-    width: 350px;
+    width: 250px;
   }
 
   #form-wrap:after,
@@ -163,14 +161,13 @@ button[type="submit"]:hover {
     width: 300px;
     top: 130px;
   }
-  #wrap {
+  .wrap {
     width: 351px;
   }
-  .blockquote{
+  .blockquote {
     font-size: 0.9rem;
   }
 }
-#wrap{
+.wrap {
   height: auto;
 }
-

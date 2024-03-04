@@ -8,7 +8,7 @@ function About() {
   return (
     <Container fluid className="about-section" id="aboutt">
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
+        <Row style={{ justifyContent: "center", padding: "0px" }}>
           <Col
             md={7}
             style={{
@@ -30,7 +30,7 @@ function About() {
             <img src={laptopImg} alt="about" className="img-fluid" />
           </Col>
         </Row>
-        <h1 className="project-heading">
+        <h1 className="project-heading" id="services">
           <strong className="purple">Technologies </strong> we use...
         </h1>
         <br />

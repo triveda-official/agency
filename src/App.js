@@ -27,6 +27,7 @@ function App() {
         data-aos="fade-up"
         data-aos-easing="ease-out-sine"
         data-aos-duration="1000"
+        style={{ paddingLeft: "0px" }}
       >
         <Navbar />
         <Home />

@@ -43,16 +43,12 @@ const Contact = () => {
   };
 
   return (
-    <div id="wrap">
+    <div className="wrap" id="contact">
       <h1 style={{ color: "white" }}>Contact Us</h1>
       {explode && <ConfettiExplosion />}
-      {explode && <ConfettiExplosion />}
-      {explode && <ConfettiExplosion />}
+
       <br />
       <div id="form-wrap">
-        {explode && <ConfettiExplosion />}
-        {explode && <ConfettiExplosion />}
-        {explode && <ConfettiExplosion />}
         <form onSubmit={handleSubmit}>
           <p>Send a message</p>
           <br />
@@ -85,9 +81,6 @@ const Contact = () => {
             Send
           </button>
         </form>
-        {explode && <ConfettiExplosion />}
-        {explode && <ConfettiExplosion />}
-        {explode && <ConfettiExplosion />}
       </div>
     </div>
   );

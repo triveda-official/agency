@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import './Navbar.css'
+import "./Navbar.css";
 import logo from "../Assets/logo.png";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { IoSettingsOutline } from "react-icons/io5";
-import {
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-} from "react-icons/ai";
+import { AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
+import { BsHeadphones } from "react-icons/bs";
+
 function NavBar() {
   useEffect(() => {
     AOS.init({
@@ -42,7 +41,12 @@ function NavBar() {
       >
         <Container>
           <Navbar.Brand href="/" className="d-flex">
-            <img src={logo} className="itsalogo" alt="brand"   style={{height:'90px',width:'90px'}}/>
+            <img
+              src={logo}
+              className="itsalogo"
+              alt="brand"
+              style={{ height: "90px", width: "90px" }}
+            />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
@@ -56,8 +60,6 @@ function NavBar() {
           </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto" defaultActiveKey="#home">
-           
-
               <Nav.Item>
                 <Nav.Link onClick={() => window.location.replace("/#projects")}>
                   <AiOutlineFundProjectionScreen
@@ -73,8 +75,13 @@ function NavBar() {
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link onClick={() => window.location.replace("/#wrap")}>
+                <Nav.Link onClick={() => window.location.replace("/#services")}>
                   <IoSettingsOutline style={{ marginBottom: "2px" }} /> Services
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link onClick={() => window.location.replace("/#contact")}>
+                  <BsHeadphones style={{ marginBottom: "2px" }} /> Contact
                 </Nav.Link>
               </Nav.Item>
             </Nav>
