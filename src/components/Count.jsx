@@ -38,7 +38,7 @@ const Count = () => {
 
         {/* Websites Developed Section */}
         <div className="neonCard">
-          <h2 className="titleText">Websites Developed</h2>
+          +<h2 className="titleText">Websites Developed</h2>
           <div className="cyberCount">
             <CountUp
               key={Math.random()}
