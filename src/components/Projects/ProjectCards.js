@@ -2,9 +2,29 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
-import { BsGithub } from "react-icons/bs";
+import Swal from "sweetalert2";
+import { useEffect } from "react";
 
 function ProjectCards(props) {
+  const handleClick = (e) => {
+    if (props.demoLink == "") {
+      e.preventDefault();
+      Swal.fire({
+        title: "Project Under Development",
+        text: "This project demo is not yet available.",
+        icon: "warning",
+        confirmButtonText: "Ok",
+        confirmButtonColor: "#3085d6",
+        background: "#f9f9f9",
+        customClass: {
+          popup: "animated fadeInDown faster",
+        },
+      });
+    } else {
+      window.open(props.demoLink, "_blank");
+    }
+  };
+
   return (
     <Card className="project-card-view">
       <div className="d-flex justify-content-center">
@@ -15,7 +35,7 @@ function ProjectCards(props) {
           style={{
             width: "220px",
             height: "180px",
-            objectFit: "contain",
+            objectFit: "cover",
             padding: "0px",
           }}
         />
@@ -25,26 +45,21 @@ function ProjectCards(props) {
         <Card.Text style={{ textAlign: "justify", gap: "0px" }}>
           {props.description}
         </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
-        </Button>
+
         {"\n"}
         {"\n"}
 
         {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
 
-        {!props.isBlog && props.demoLink && (
-          <Button
-            variant="primary"
-            href={props.demoLink}
-            target="_blank"
-            style={{ marginLeft: "10px" }}
-          >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
-          </Button>
-        )}
+        <Button
+          variant="primary"
+          onClick={handleClick}
+          target="_blank"
+          style={{ marginLeft: "10px" }}
+        >
+          <CgWebsite /> &nbsp;
+          {"Demo"}
+        </Button>
       </Card.Body>
     </Card>
   );

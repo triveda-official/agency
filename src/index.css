@@ -4,6 +4,49 @@ body {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to bottom left, #3F474F, #191d21);
+  background: linear-gradient(to bottom left, #3f474f, #191d21);
+}
 
+/* Dark mode container */
+.dark-container {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Dark mode card styles */
+.card-dark {
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Card title styles */
+.card-title {
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Card text styles */
+.card-text {
+  color: #b0b0b0;
+}
+
+.count {
+  color: #f0f0f0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Add smooth transitions for cards */
+.card-dark {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-dark:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }

@@ -11,6 +11,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ContactPage from "../src/Contact";
 import Footer from "../src/components/Footer";
+import Count from "./components/Count";
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
         <Home />
         <Projects />
         <About />
+        <Count />
         <ContactPage />
         <Footer />
       </div>

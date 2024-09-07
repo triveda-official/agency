@@ -1,0 +1,43 @@
+[debug] [2024-09-07T14:11:41.402Z] ----------------------------------------------------------------------
+[debug] [2024-09-07T14:11:41.404Z] Command:       C:\Program Files\nodejs\node.exe D:\codes\Triveda\trivedaagency\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-09-07T14:11:41.404Z] CLI Version:   13.4.0
+[debug] [2024-09-07T14:11:41.404Z] Platform:      win32
+[debug] [2024-09-07T14:11:41.404Z] Node Version:  v20.16.0
+[debug] [2024-09-07T14:11:41.404Z] Time:          Sat Sep 07 2024 19:41:41 GMT+0530 (India Standard Time)
+[debug] [2024-09-07T14:11:41.404Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-07T14:11:41.445Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-07T14:11:41.445Z] > authorizing via signed-in user (trivedaofficial@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\codes\Triveda\trivedaagency
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using triveda-e4aa5. 
+[debug] [2024-09-07T14:12:01.727Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/triveda-e4aa5 [none]
+[debug] [2024-09-07T14:12:02.734Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/triveda-e4aa5 403
+[debug] [2024-09-07T14:12:02.734Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/triveda-e4aa5 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-09-07T14:12:02.734Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-09-07T14:12:03.085Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (D:\codes\Triveda\trivedaagency\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (D:\codes\Triveda\trivedaagency\node_modules\firebase-tools\lib\apiv2.js:292:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project triveda-e4aa5. Please make sure the project exists and your account has permission to access it.

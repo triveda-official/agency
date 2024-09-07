@@ -20,26 +20,20 @@ const Contact = () => {
       setExplode(false);
     }, 3000); // Adjust the delay as needed to match your confetti animation duration
   };
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const url =
-        "https://sheet.best/api/sheets/9f675346-5fcc-42b5-8365-dc6e0e60a080";
-      await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      console.log("Message sent successfully");
-      handleButtonClick();
+    const { name, email, message } = formData;
 
-      // Optionally, reset form fields after successful submission
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error("Error sending message:", error);
-    }
+    // Create the mailto link
+    const mailtoLink = `mailto:trivedaofficial@gmail.com?subject=Triveda%20Agency&body=Name:%20${encodeURIComponent(
+      name
+    )}%0AEmail:%20${encodeURIComponent(
+      email
+    )}%0AMessage:%20${encodeURIComponent(message)}`;
+
+    window.location.href = mailtoLink;
+
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
